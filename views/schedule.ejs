@@ -19,6 +19,10 @@
 }
 	</style>
 	<script src="js/schedule.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -31,7 +35,8 @@
             <ul class="list-unstyled components">
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a class="nav-link" href="Student" style="color:#000000;">Home</a>
+					
+                    <a class="nav-link" href="Student" style="color:#000000;">	<i class="fa fa-home"></i> Home</a>
                 </li>
                 <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" style="color:#000000;">My courses</a>
@@ -64,9 +69,7 @@
                         <i class="fas fa-align-justify"></i>
                     </button>
                     <h1>National Institute of Technology, Calicut</h1>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bell" viewBox="3 0 16 16">
-  				<path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
-			</svg>
+                    <img width="80px" height="60px" style="margin-left: 10px;"src="image/NITC_logo.jpeg">
       		
                 </div>
             </nav>
@@ -80,9 +83,8 @@
 			<td align="center" height="50" width="100"><b>10:15-11:15</b></td>
 			<td align="center" height="50" width="100"><b>11:15-12:15</b></td>
 			<td align="center" height="50" width="100"><b>01:00-02:00</b></td>
-			<td align="center" height="50" width="100"><b>02:00-03:00</b></td>
-			<td align="center" height="50" width="100"><b>03:00-04:00</b></td>
-			<td align="center" height="50" width="100"><b>04:00-05:00</b></td>
+			<td align="center" height="50" width="100"><b>02:00-05:00</b></td>
+			
 			<td align="center" height="50" width="100"><b>05:00-06:00</b></td>
 		</tr>
 		<tr>
@@ -92,7 +94,7 @@
 			<td align="center" height="50" id="13"><%= answer[2] %></td>
 			<td align="center" height="50" id="14"><%= answer[3] %></td>
 			<td align="center" height="50" id="15"><%= answer[4] %></td>
-			<td colspan="3" align="center" height="50" id="16"><%= answer[5] %></td>
+			<td align="center" height="50" id="16"><%= answer[5] %></td>
 			<td align="center" height="50" id="17"><%= answer[6] %></td>
 		</tr>
 		<tr>
@@ -102,7 +104,7 @@
 			<td align="center" height="50" id="23"><%= answer[9] %></td>
 			<td align="center" height="50" id="24"><%= answer[10] %></td>
 			<td align="center" height="50" id="25"><%= answer[11] %></td>
-			<td colspan="3" align="center"height="50" id="26"><%= answer[12] %></td>
+			<td  align="center"height="50" id="26"><%= answer[12] %></td>
 			<td align="center" height="50" id="27"><%= answer[13] %></td>
 		</tr>
 		<tr>
@@ -112,7 +114,7 @@
 			<td align="center" height="50" id="33"><%= answer[16] %></td>
 			<td align="center" height="50" id="34"><%= answer[17] %></td>
 			<td align="center" height="50" id="35"><%= answer[18] %></td>
-			<td colspan="3" align="center" height="50" id="36"><%= answer[19] %></td>
+			<td  align="center" height="50" id="36"><%= answer[19] %></td>
 			<td align="center" height="50" id="37"><%= answer[20] %></td>
 		</tr>
 		<tr>
@@ -122,7 +124,7 @@
 			<td align="center" height="50" id="43"><%= answer[23] %></td>
 			<td align="center" height="50" id="44"><%= answer[24] %></td>
 			<td align="center" height="50" id="45"><%= answer[25] %></td>
-			<td colspan="3" align="center" height="50" id="46"><%= answer[26] %></td>
+			<td  align="center" height="50" id="46"><%= answer[26] %></td>
 			<td align="center" height="50" id="47"><%= answer[27] %></td>
 		</tr>
 		<tr>
@@ -132,7 +134,7 @@
 			<td align="center" height="50" id="53"><%= answer[30] %></td>
 			<td align="center" height="50" id="54"><%= answer[31] %></td>
 			<td align="center" height="50" id="55"><%= answer[32] %></td>
-			<td colspan="3" align="center" height="50" id="56"><%= answer[33] %></td>
+			<td  align="center" height="50" id="56"><%= answer[33] %></td>
 			<td align="center" height="50" id="57"><%= answer[34] %></td>
 		</tr>
 	</table>

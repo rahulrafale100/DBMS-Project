@@ -12,11 +12,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     body {
-      background-image: url('image/todo.jpeg');
+      background-image: url("image/todo.jpeg");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: 100% 100%;
     }
+    .btn2 {
+            background-color: DodgerBlue;
+            border: none;
+            color: white;
+            padding: 12px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100px;
+          }
+          
+          /* Darker background on mouse-over */
+          .btn2:hover {
+            background-color: royalblue;
+          }
+
+    .btn1 {
+            background-color: rgb(214, 52, 52);
+            border: none;
+            color: white;
+            padding: 12px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 70px;
+          }
+          
+          /* Darker background on mouse-over */
+          .btn1:hover {
+            background-color: red;
+          }
+
   </style>
 </head>
 
@@ -34,21 +64,16 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="Student">Home</a>
+            
           </li>
           
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              My Courses
-            </a>
-            <ul class="dropdown-menu" id="list" aria-labelledby="navbarDropdown">
-            </ul>
-          </li>
-          <li class="nav-item" style="margin-right: 0px">
-						<a class="nav-link" href="/logout">Logout</a>
-					</li>
+         
+          
          
         </ul>
+        
+            <a class="nav-link" href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+        
 
       </div>
     </div>
@@ -58,8 +83,8 @@
     <div class="container-fluid py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-          <div class="card bg-white text-dark" style="border-radius: 1rem;">
-            <div class="card-body p-5 text-center" style="background-color: blueviolet;">
+          <div class="card bg-transparent text-dark" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center" style="background-color:rgb(100,100,255,0.8);">
 
               <div class="mb-md-5 mt-md-4 pb-5">
 
@@ -92,8 +117,7 @@
                         </div>
                         <%= x.time %>
                       </div>
-                    
-                      <button class="btn btn-outline-danger" name="del" value="<%=x.id%>" onClick="this.form.submit()" type="submit">DELETE </button>
+                      <button class="btn1" name="del" value="<%=x.id%>" onClick="this.form.submit()" type="submit"><i class="fa fa-trash"></i> </button>
                     </li>
                     <%})%>
                 </ol>

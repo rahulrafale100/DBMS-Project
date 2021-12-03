@@ -44,6 +44,7 @@ app.get("/Admin",function(req,res){
     })
     
 });
+
 app.get("/logout",function(req,res){
     res.redirect("/");
 });
@@ -108,6 +109,9 @@ app.get("/Events",function(req,res){
         }
     })
 
+})
+app.get("/Change",function(req,res){
+    res.render("ChangePassword");
 })
 app.get("/schedule",function(req,res){
     let qry="SELECT * FROM student_course as fc inner join courses as f where fc.course_id=f.courseid AND fc.student_id="+studentid;
@@ -453,6 +457,9 @@ app.post("/Admin",function(req,res){
         })
     }
 });
+app.post("/home",function(req,res){
+    res.redirect("/Student");
+})
 app.post("/AdminP",function(req,res){
     const uname=req.body.user;
     
@@ -764,6 +771,24 @@ app.post("/WorkshopP",function(req,res){
         }
     })
 });
+app.post("/Change",function(req,res){
+    const name=req.body.username;
+    const oldpwd=req.body.password;
+    const newpwd=req.body.password1;
+    const newpewd1=req.body.password2;
+    let qry="UPDATE students set password='"+newpwd+"' where (username='"+name+"')";
+    con.query(qry,function(err,result){
+        if(err){
+            console.log(err);
+        }
+        else{
+            
+                res.redirect("/Student");
+        
+            
+        }
+    })
+})
 app.listen(3000,function(req,res){
     console.log("Server started at port 3000");
 });
