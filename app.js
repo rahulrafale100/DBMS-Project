@@ -657,20 +657,36 @@ app.post("/Add",function(req,res){
     const cname=req.body.naam;
     const department=req.body.dep;
     let qry1="INSERT INTO courses (courseid,courseName,Department) values ('"+code+"','"+cname+"','"+department+"')";
+    let qry="SELECT * FROM courses where courseid='"+code+"'";
     let qry2="INSERT INTO faculty_course (fid,cid) values ("+facultyid+",'"+code+"')";
-    con.query(qry1,function(err){
-        if(err)
-        console.log(err);
+    con.query(qry,function(err,result){
+        if(err){
+            console.log(err);
+        }
         else{
-            con.query(qry2,function(err){
-                if(err)
-                console.log(err);
-                else{
+            if(result.length>0){
+                con.query(qry2,function(err){
                     res.redirect("/Add");
-                }
-            })
+                })
+            }
+            else{
+                con.query(qry1,function(err){
+                    if(err)
+                    console.log(err);
+                    else{
+                        con.query(qry2,function(err){
+                            if(err)
+                            console.log(err);
+                            else{
+                                res.redirect("/Add");
+                            }
+                        })
+                    }
+                })
+            }
         }
     })
+    
 });
 app.post("/Faculty",function(req,res){
     const topic=req.body.topic;
